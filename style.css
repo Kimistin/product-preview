@@ -1,0 +1,150 @@
+body {
+    background-color: hsl(30, 38%, 92%);
+    margin: 0px;
+    padding: 0px;
+    cursor: default;
+}
+
+picture {
+   width: 300px;
+   margin-bottom: 0%;
+}
+
+img {
+    width: 300px;
+    border-radius: 10px 0 0 10px;
+    margin-bottom: 0%;
+}
+
+svg {
+    align-self: center;
+    margin-right: 10px;
+}
+
+.wrapper {
+   display: grid;
+   grid-template: auto / auto auto;
+   background-color: rgb(255, 255, 255);
+   width: 600px;
+   height: 450px;
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    animation: intro 1.5s;
+}
+
+.price {
+    display: flex;
+    align-items: center;  
+    color: hsl(158, 36%, 37%);
+}
+
+.lining{
+    text-decoration: line-through;
+    margin-left: 20px;
+    color: black;
+}
+
+.cart {
+    display: flex;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    width: fit-content;
+    padding: 0px 65px 0px 65px;
+    border-radius: 10px;
+    font-family: "fraunces", sans-serif;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+}
+
+.perfu {
+    letter-spacing: 6px;
+    font-family: "fraunces", sans-serif;
+    font-size: 13px;
+}
+
+.contcent {
+    display: grid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.respon {
+    width: 200px;
+    line-height: 30px;
+    margin-top: -15px;
+}
+
+.para {
+    width: 230px;
+    font-family: "fraunces", sans-serif;
+    line-height: 25px;
+    margin-top: -10px;
+    margin-bottom: -15px;
+}
+
+.cart:hover {
+    background-color: hsl(155, 55%, 14%);
+    cursor: pointer;
+}
+
+@media (max-width: 430px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 600px;
+        width: 300px;
+        margin-bottom: 100px;
+        margin: auto;
+    }
+    .respon, .para, .price, .perfu{
+        margin-left: 20px;
+        margin-right: -20px;
+    }
+
+    img {
+        border-radius: 10px 10px 0 0;
+        margin-bottom: -10px;
+    }
+
+    .respon {
+        width: 300px;
+        line-height: 30px;
+        margin-top: -20px;
+        margin-bottom: -10px;
+    }
+
+    .cart {
+        margin: auto;
+        padding: 0 75px 0 75px;
+    }
+
+    .para {
+        width: 250px;
+    }
+
+    .container {
+        animation: mob 1.5s;
+    }
+}
+
+@keyframes intro {
+    0% {
+        transform: translateX(300px);
+        opacity: 0%;
+    }
+}
+
+@keyframes mob {
+    0% {
+        transform: translateY(600px);
+        opacity: 0%;
+    }
+}
